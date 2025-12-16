@@ -14,10 +14,6 @@ java {
     }
 }
 
-springBoot {
-    mainClass = 'br.com.borbolelala.estoqueapi.EstoqueApiApplication'
-}
-
 configurations {
     compileOnly {
         extendsFrom annotationProcessor

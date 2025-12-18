@@ -4,7 +4,7 @@ API RESTful completa para o sistema de gerenciamento de estoque da Borbolêlalá
 
 O sistema foi migrado de uma aplicação Python de terminal para uma arquitetura web moderna, utilizando as tecnologias mais recentes do ecossistema Java.
 
-## ✨ Funcionalidades
+## ✨ Funcionalidades existentes
 
 * **Gerenciamento de Produtos:** Operações CRUD (Criar, Ler, Atualizar, Deletar) completas para os produtos.
 * **Controle de Estoque:** Endpoint dedicado para movimentações de entrada e saída de estoque de forma atômica.

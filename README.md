@@ -15,7 +15,7 @@ O sistema foi migrado de uma aplicação Python de terminal para uma arquitetura
 
 * **Java 21:** Versão recente e amplamente utilizada no meio do desenvolvimento.
 * **Spring Boot 3+:** Framework principal para a construção da API.
-* **Gradle 9.0:** Ferramenta de automação de build.
+* **Gradle 8.14:** Ferramenta de automação de build.
 * **Spring Data MongoDB:** Para integração e comunicação com o banco de dados.
 * **MongoDB:** Banco de dados NoSQL orientado a documentos, conectado a um cluster na nuvem.
 * **Lombok:** Para reduzir código boilerplate (getters, setters, construtores).
@@ -24,7 +24,7 @@ O sistema foi migrado de uma aplicação Python de terminal para uma arquitetura
 
 Antes de começar, você vai precisar ter instalado em sua máquina:
 * [JDK (Java Development Kit)](https://www.oracle.com/java/technologies/downloads/) - Versão 21 ou superior.
-* [Gradle](https://gradle.org/install/) - Versão 9.0 ou superior (Opcional, pode-se usar o Gradle Wrapper `gradlew`).
+* [Gradle](https://gradle.org/install/) - Versão 8.14 ou superior (Opcional, pode-se usar o Gradle Wrapper `gradlew`).
 * Acesso a um cluster MongoDB (ex: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)).
 
 ## ⚙️ Configuração e Instalação
@@ -66,15 +66,15 @@ A API estará disponível em `http://localhost:8080`.
 
 A base de todos os endpoints é `/api/produtos`.
 
-| Método   | Endpoint           | Descrição                                        | Exemplo de Corpo (Body)                                                                            |
-|:---------|:-------------------|:-------------------------------------------------| :------------------------------------------------------------------------------------------------- |
-| `GET`    | `/`                | Lista todos os produtos cadastrados.             | N/A                                                                                                |
-| `GET`    | `/{id}`            | Busca um produto específico pelo seu ID.         | N/A                                                                                                |
-| `POST`   | `/`                | Cria um novo produto.                            | `{ "nome": "Saia Tule", "categoria": "Saias", "quantidade": 20, "preco": 79.90 }`                  |
+| Método   | Endpoint           | Descrição                                        | Exemplo de Corpo (Body)                                                                          |
+|:---------|:-------------------|:-------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| `GET`    | `/`                | Lista todos os produtos cadastrados.             | N/A                                                                                              |
+| `GET`    | `/{id}`            | Busca um produto específico pelo seu ID.         | N/A                                                                                              |
+| `POST`   | `/`                | Cria um novo produto.                            | `{ "nome": "Saia Tule", "categoria": "Saias", "quantidade": 20, "preco": 79.90 }`                |
 | `PUT`    | `/{id}`            | Atualiza as informações de um produto existente. | `{ "nome": "Saia Tule Rosa", "categoria": "Saias", "preco": 85.50 }` (quantidade não é alterada) |
-| `DELETE` | `/{id}`            | Remove um produto do sistema.                    | N/A                                                                                                |
-| `PATCH`  | `/{id}/movimentar` | Adiciona ou remove itens do estoque.             | `{ "quantidade": 10 }` (para entrada) ou `{ "quantidade": -5 }` (para saída)                      |
-| `GET`    | `/valor-total`     | Calcula o valor total em estoque.                | `{ "quantidade": 10 }` (para entrada) ou `{ "quantidade": -5 }` (para saída)                      |
+| `DELETE` | `/{id}`            | Remove um produto do sistema.                    | N/A                                                                                              |
+| `PATCH`  | `/{id}/movimentar` | Adiciona ou remove itens do estoque.             | `{ "quantidade": 10 }` (para entrada) ou `{ "quantidade": -5 }` (para saída)                     |
+| `GET`    | `/valor-total`     | Calcula o valor total em estoque.                | N/A                                                                                              |
 
 ## 📊 Modelo de Documento Armazenado no Banco de Dado
 ```mermaid

@@ -74,7 +74,6 @@ A base de todos os endpoints é `/api/produtos`.
 | `PUT`    | `/{id}`            | Atualiza as informações de um produto existente. | `{ "nome": "Saia Tule Rosa", "categoria": "Saias", "preco": 85.50 }` (quantidade não é alterada) |
 | `DELETE` | `/{id}`            | Remove um produto do sistema.                    | N/A                                                                                              |
 | `PATCH`  | `/{id}/movimentar` | Adiciona ou remove itens do estoque.             | `{ "quantidade": 10 }` (para entrada) ou `{ "quantidade": -5 }` (para saída)                     |
-| `GET`    | `/valor-total`     | Calcula o valor total em estoque.                | N/A                                                                                              |
 
 ## 📊 Modelo de Documento Armazenado no Banco de Dado
 ```mermaid

@@ -1,11 +1,9 @@
 package br.com.borbolelala.estoqueapi.controller;
 
 import br.com.borbolelala.estoqueapi.model.Produto;
-import br.com.borbolelala.estoqueapi.repository.ProdutoRepository;
 import br.com.borbolelala.estoqueapi.service.ProdutoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -17,7 +15,6 @@ import java.util.Map;
 public class ProdutoController {
 
     private final ProdutoService produtoService;
-    private final ProdutoRepository produtoRepository;
 
     @GetMapping
     public List<Produto> listarTodos() {
@@ -53,12 +50,6 @@ public class ProdutoController {
             throw new IllegalArgumentException("O corpo da requisição deve conter a chave 'quantidade'.");
         }
         return produtoService.movimentarEstoque(id, quantidade);
-    }
-
-    @GetMapping("/valor-total")
-    public ResponseEntity<Double> getValorTotal() {
-        Double total = produtoRepository.obterValorTotalEstoque();
-        return ResponseEntity.ok(total != null ? total : 0.0);
     }
 
 }

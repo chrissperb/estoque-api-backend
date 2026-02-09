@@ -15,7 +15,7 @@ O sistema foi migrado de uma aplicação Python de terminal para uma arquitetura
 
 * **Java 21:** Versão recente e amplamente utilizada no meio do desenvolvimento.
 * **Spring Boot 3+:** Framework principal para a construção da API.
-* **Gradle 9.0:** Ferramenta de automação de build.
+* **Gradle 8.14:** Ferramenta de automação de build.
 * **Spring Data MongoDB:** Para integração e comunicação com o banco de dados.
 * **MongoDB:** Banco de dados NoSQL orientado a documentos, conectado a um cluster na nuvem.
 * **Lombok:** Para reduzir código boilerplate (getters, setters, construtores).
@@ -24,7 +24,7 @@ O sistema foi migrado de uma aplicação Python de terminal para uma arquitetura
 
 Antes de começar, você vai precisar ter instalado em sua máquina:
 * [JDK (Java Development Kit)](https://www.oracle.com/java/technologies/downloads/) - Versão 21 ou superior.
-* [Gradle](https://gradle.org/install/) - Versão 9.0 ou superior (Opcional, pode-se usar o Gradle Wrapper `gradlew`).
+* [Gradle](https://gradle.org/install/) - Versão 8.14 ou superior (Opcional, pode-se usar o Gradle Wrapper `gradlew`).
 * Acesso a um cluster MongoDB (ex: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)).
 
 ## ⚙️ Configuração e Instalação
